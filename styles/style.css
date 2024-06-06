@@ -1,0 +1,233 @@
+/* GENERAL */
+:root {
+    --black: #222;
+    --white: #DFDFDF;
+    --darkerWhite: #CCC;
+    --red: #C50000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background-color: var(--white);
+}
+
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.4rem;
+    background-color: var(--white);
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navLink {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.navLink:hover {
+    background-color: var(--darkerWhite);
+    cursor: pointer;
+}
+
+.navIcon {
+    width: 3rem;
+}
+
+.navMobileOptions {
+    display: none;
+}
+
+.navMobileOptions > summary::-webkit-details-marker {
+    display: none;
+    position: relative;
+}
+
+.navMobileList {
+    position: absolute;
+    right: 1.5rem;
+    list-style: none;
+    text-align: right;
+}
+
+.navMobileList > li {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 61rem) {
+    .navDesktopOptions {
+        display: none;
+    }
+
+    .navMobileOptions {
+        display: block;
+    }
+}
+
+/* HEADER */
+header {
+    width: 100vw;
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+header div {
+    min-width: 250px;
+}
+
+header h1 {
+    font-size: 6rem;
+    line-height: 90%;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 699px) {
+    header {
+        height: min-content;
+        margin-bottom: 5rem;
+    }
+
+    .headerImgFrame {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    header img {
+        width: 80%;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    header p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    header {
+        margin-bottom: 8rem;
+    }
+
+    .headerImgFrame {
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    header img {
+        width: 50%;
+    }
+
+    header h1 {
+        text-align: center;
+        font-size: 5rem;
+    }
+    
+    header p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+/* SECTION */
+section {
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto 3rem auto;
+    padding: 1.5rem;
+    min-height: 350px;
+}
+
+.sectionTitle {
+    font-size: calc(1.5vw + 1.5rem);
+    text-align: center;
+}
+
+.sectionTextContent {
+    font-size: 1.2rem;
+    width: 75%;
+    margin: auto;
+    line-height: 120%;
+}
+
+.sectionTextCentered {
+    text-align: center;
+}
+
+.sectionWrapperThemeBlack {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.sectionWrapperThemeRed {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.email {
+    color: var(--black);
+}
+
+/* GALLERY SECTION */
+.sectionGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sectionGallery > a {
+    margin: 0.5rem 1rem;
+    color: var(--black);
+    position: relative;
+}
+
+.sectionGallery > a::after {
+    content: "open_in_new";
+    font-family: "Material Symbols Outlined";
+    position: absolute;
+}
+
+/* CONTACT */
+.email {
+    color: var(--darkerWhite);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
